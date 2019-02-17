@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+	<title>Reading List</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}"></link>
+</head>
+<body>
+	<h2>당신의 독서중인 목록</h2>
+	<div th:unless="${#lists.isEmpth(books)}"></div>
+		<dl th:each="book : ${books}">
+			<dt class="bookHeadline">
+				<span th:text="${book.title}">Title</span> by
+				<span th:text="${book.author}">Author</span>
+				(ISBN: <sapn th:text="${book.isbn}">ISBN</sapn>
+			</dt>
+			<dt class="bookDescription">
+				<span th:text="${book.title}">Title</span> by
+				<span th:text="${book.author}">Author</span>
+				(ISBN: <sapn th:text="${book.isbn}">ISBN</sapn>
+			</dt>
+		</dl>
+			
+</body>
+</html>
