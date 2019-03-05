@@ -1,0 +1,9 @@
+git for-each-ref \
+	refs/tags \
+	--sort=-taggerdate \
+	--format='%(refname:short)' \
+	--count=1
+	
+	
+git for-each-ref refs/tags --sort=-taggerdate --format='%(refname:short)' --count=1	
+git for-each-ref refs/tags --sort=-refname --format='%(refname:short)' --count=2
